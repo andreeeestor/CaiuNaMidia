@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SaiuNaMídia - COPASA
 
-## Getting Started
+O **SaiuNaMídia** é uma aplicação web desenvolvida exclusivamente para apoiar e otimizar o fluxo de trabalho do setor de publicidade da **COPASA**. 
 
-First, run the development server:
+A plataforma funciona como um explorador e repositório de arquivos focado em mídia (imagens, banners e peças publicitárias), fornecendo uma interface rica, robusta e familiar (similar ao Google Drive/Finder), que permite o armazenamento, organização e compartilhamento rápido de recursos essenciais da equipe.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Principais Funcionalidades
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Dashboard Estilo Explorer:** Interface em Grid (Grade) e List (Lista), navegação por pastas com visual idêntico aos melhores exploradores de arquivos.
+- **Armazenamento em Nuvem (Cloudinary):** Upload seguro e otimizado de imagens.
+- **Organização por Pastas:** Estrutura em árvore ilimitada, facilitando encontrar materiais de campanhas específicas.
+- **Visualização Rápida (Lightbox):** Pré-visualização com um único clique com link imediato para compartilhamento.
+- **Sistema de Seleção e Ações em Lote:** Caixas de seleção individuais para exclusão e movimentação de múltiplas mídias de uma vez.
+- **Menu de Contexto (Right-click):** Acesso rápido às opções de cópia de link, mover arquivo ou deletar.
+- **Design COPASA:** Tema alinhado à identidade visual da companhia.
+- **Área Restrita:** Acesso protegido por senha garantindo segurança dos materiais internos (NextAuth).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tecnologias Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Frontend:** [Next.js 15 (App Router)](https://nextjs.org/) + React 19
+- **Estilização:** CSS Modular (Foco em performance e UI fiel à identidade da COPASA)
+- **Autenticação:** [NextAuth.js (v4)](https://next-auth.js.org/)
+- **Armazenamento/CDN:** [Cloudinary](https://cloudinary.com/) (API Integrada para gerenciamento dos recursos)
 
-## Learn More
+## 📦 Como executar o projeto localmente
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone o repositório.
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Crie um arquivo `.env.local` na raiz com as seguintes chaves (solicite à equipe responsável):
+   ```env
+   # Cloudinary Keys
+   CLOUDINARY_CLOUD_NAME=
+   CLOUDINARY_API_KEY=
+   CLOUDINARY_API_SECRET=
+   
+   # NextAuth
+   NEXTAUTH_SECRET=uma-string-secreta-forte
+   NEXTAUTH_URL=http://localhost:3000
+   
+   # Acesso
+   ACCESS_PASSWORD=senha_do_sistema
+   ```
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+5. Acesse `http://localhost:3000` no seu navegador.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Desenvolvido para facilitar o dia a dia da Publicidade da COPASA.*
