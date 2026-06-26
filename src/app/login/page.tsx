@@ -34,7 +34,7 @@ export default function LoginPage() {
       <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-sm border border-zinc-100">
         <div className="text-center mb-8">
           <div className="text-4xl mb-2">🖼️</div>
-          <h1 className="text-2xl font-bold text-zinc-800">ImgHub</h1>
+          <h1 className="text-2xl font-bold text-zinc-800">SaiuNaMídia</h1>
           <p className="text-zinc-400 text-sm mt-1">Acesso restrito</p>
         </div>
 

@@ -6,7 +6,7 @@ import { Providers } from "@/components/Providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ImgHub",
+  title: "SaiuNaMídia",
   description: "Hospede e compartilhe imagens com URL pública",
 };
 
